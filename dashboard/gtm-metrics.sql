@@ -1,0 +1,1 @@
+-- Success tracking for pre-launch activation SELECT role, COUNT(id) as total_leads, SUM(CASE WHEN email_opened = true THEN 1 ELSE 0 END) as opens, SUM(CASE WHEN clicked_early_access = true THEN 1 ELSE 0 END) as activation_clicks FROM tooths_marketing_events WHERE campaign_tag = 'Q1_PRE_LAUNCH' GROUP BY role;
